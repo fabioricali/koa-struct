@@ -1,0 +1,47 @@
+{
+  "name": "koa-struct",
+  "version": "1.0.0",
+  "description": "Struct for Koa",
+  "main": "index.js",
+  "scripts": {
+    "preversion": "npm run-script test",
+    "version:major": "npm version major",
+    "version:minor": "npm version minor",
+    "version:patch": "npm version patch",
+    "postversion": "npm publish && git push && git push --tags",
+    "test": "mocha test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fabioricali/koa-struct.git"
+  },
+  "keywords": [
+    "koa",
+    "struct",
+    "validation",
+    "valify",
+    "validate",
+    "model"
+  ],
+  "author": "Fabio Ricali",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fabioricali/koa-struct/issues"
+  },
+  "homepage": "https://github.com/fabioricali/koa-struct#readme",
+  "devDependencies": {
+    "koa": "^2.5.2",
+    "koa-body": "^4.0.4",
+    "koa-router": "^7.4.0",
+    "mocha": "^5.2.0",
+    "supertest": "^3.1.0"
+  },
+  "dependencies": {
+    "defaulty": "^2.1.0",
+    "valify": "^4.5.0"
+  },
+  "peerDependencies": {
+    "koa-body": "4.x",
+    "koa-router": "7.x"
+  }
+}
