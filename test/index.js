@@ -83,7 +83,7 @@ describe('Koa struct', function () {
         request
             .post('/my-body-fail')
             .send({})
-            .expect(500)
+            .expect(400)
             .end((err, res) => {
                 console.log(res.text);
                 if (err) throw err;
@@ -119,7 +119,7 @@ describe('Koa struct', function () {
 
         request
             .get('/my-param-fail/ciao')
-            .expect(500)
+            .expect(400)
             .end((err, res) => {
                 console.log(res.text);
                 if (err) throw err;
@@ -155,7 +155,7 @@ describe('Koa struct', function () {
 
         request
             .get('/my-query-fail/?id=ciao')
-            .expect(500)
+            .expect(400)
             .end((err, res) => {
                 console.log(res.text);
                 if (err) throw err;
@@ -175,7 +175,7 @@ describe('Koa struct', function () {
 
         request
             .get('/my-query-fail-2/?id=255')
-            .expect(500)
+            .expect(400)
             .end((err, res) => {
                 console.log(res.text);
                 if (err) throw err;

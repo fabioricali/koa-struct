@@ -2,7 +2,11 @@ const Validator = require('valify');
 const defaulty = require('defaulty');
 
 const defaultGlobals = {
-    autoCast: true
+    autoCast: true,
+    appendToError: {
+        status: 400,
+        expose: true
+    }
 };
 
 module.exports = function (globals = {}) {

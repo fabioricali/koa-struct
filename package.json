@@ -38,7 +38,7 @@
   },
   "dependencies": {
     "defaulty": "^2.1.0",
-    "valify": "^4.5.0"
+    "valify": "^4.6.0"
   },
   "peerDependencies": {
     "koa-body": "4.x",
