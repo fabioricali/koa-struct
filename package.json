@@ -1,6 +1,6 @@
 {
   "name": "koa-struct",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Struct for Koa",
   "main": "index.js",
   "scripts": {
