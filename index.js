@@ -15,12 +15,15 @@ module.exports = function (globals = {}) {
 
     return async function (ctx, next) {
 
-        globals.appendToError.request = {
-            method: ctx.request.method,
-            url: ctx.request.url,
-            header: ctx.request.header,
-            body: ctx.request.body,
-            query: ctx.request.query
+        globals.appendToError.ctx = {
+            path: ctx.path,
+            request: {
+                method: ctx.request.method,
+                url: ctx.request.url,
+                header: ctx.request.header,
+                body: ctx.request.body,
+                query: ctx.request.query
+            }
         };
 
         ctx.struct = (model, opt = {}) => {
